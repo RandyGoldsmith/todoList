@@ -1,0 +1,16 @@
+.todo-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 5px solid black;
+    width: 100%;
+    margin: 4px auto;
+    padding: 10px;
+    list-style: none;
+}
+
+.todo-list {
+    margin-bottom: 0px;
+    margin-top: 25px;
+    padding: 0px;
+}

@@ -1,14 +1,18 @@
 import React from 'react';
+import './TodoList.css';
 
 const TodoList = (props) => {
     return (
-        <ul>
-            {props.todos.map((todo) => (
-                <li>
-                    {todo.title}
-                </li>
-            ))}
-        </ul>      
+        <div>
+            <ul className="todo-list">
+                {props.todos.map((todo) => (
+                    <li className="todo-row">
+                        {todo.title}
+                        <span className=""></span>
+                    </li>
+                ))}
+            </ul>
+        </div>      
     );
 };
 
