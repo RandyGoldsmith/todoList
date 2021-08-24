@@ -8,7 +8,10 @@ const TodoList = (props) => {
                 {props.todos.map((todo) => (
                     <li className="todo-row">
                         {todo.title}
-                        <span className=""></span>
+                        <span>
+                            <i className="fas fa-trash-alt"></i>
+                            <i className="fas fa-edit ms-2"></i>
+                        </span>
                     </li>
                 ))}
             </ul>
