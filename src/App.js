@@ -13,12 +13,18 @@ const App = () => {
         });
     }
 
+    const deleteTodo = (id) => {
+        setTodoList((prevTodoList) => {
+            return [...prevTodoList].filter(todo => todo.id !== id);
+        });
+    }
+
     return (
         <div className="container">
             <div className="row justify-content-center">
                 <div className="col-6">
                     <AddTodo onAddTodo={addTodo} />
-                    <TodoList todos={todoList} />
+                    <TodoList todos={todoList} deleteTodo={deleteTodo}/>
                 </div>
             </div>
         </div>       

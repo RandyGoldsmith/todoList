@@ -1,15 +1,15 @@
 import React from 'react';
 import './TodoList.css';
 
-const TodoList = (props) => {
+const TodoList = ({todos, deleteTodo}) => {
     return (
         <div>
             <ul className="todo-list">
-                {props.todos.map((todo) => (
-                    <li className="todo-row">
+                {todos.map((todo) => (
+                    <li className="todo-row" key={todo.id}>
                         {todo.title}
                         <span>
-                            <i className="fas fa-trash-alt"></i>
+                            <i className="fas fa-trash-alt" onClick={() => deleteTodo(todo.id)}></i>
                             <i className="fas fa-edit ms-2"></i>
                         </span>
                     </li>
