@@ -1,0 +1,11 @@
+.todo-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 5px solid black;
+    border-radius: 5px;
+    width: 100%; 
+    margin: 15px auto;
+    padding: 10px;
+}
+

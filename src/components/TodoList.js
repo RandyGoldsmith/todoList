@@ -1,18 +1,19 @@
 import React from 'react';
 import './TodoList.css';
+import TodoListItem from './TodoListItem';
 
-const TodoList = ({todos, deleteTodo}) => {
+const TodoList = ({todos, deleteTodo, editTodo, isEditing}) => {
     return (
         <div>
             <ul className="todo-list">
                 {todos.map((todo) => (
-                    <li className="todo-row" key={todo.id}>
-                        {todo.title}
-                        <span>
-                            <i className="fas fa-trash-alt" onClick={() => deleteTodo(todo.id)}></i>
-                            <i className="fas fa-edit ms-2"></i>
-                        </span>
-                    </li>
+                        <TodoListItem 
+                            key={todo.id}
+                            todo={todo} 
+                            deleteTodo={deleteTodo} 
+                            editTodo={editTodo}
+                            isEditing={isEditing}        
+                        />
                 ))}
             </ul>
         </div>      
